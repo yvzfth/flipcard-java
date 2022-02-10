@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" stylesheets="@../../../../hw/java/myproject/src/styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LibraryCardView">
+   <children>
+      <Pane layoutY="4.0" prefHeight="600.0" prefWidth="280.0" styleClass="menuBar" stylesheets="@styles.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="280.0" styleClass="userInfo" stylesheets="@styles.css">
+               <children>
+                  <Pane layoutX="95.0" layoutY="60.0" prefHeight="30.0" prefWidth="150.0">
+                     <children>
+                        <Label fx:id="usernameMenuBar" alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="150.0" styleClass="usernameMenuBar" stylesheets="@styles.css" text="Username" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="45.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="32.0">
+                     <children>
+                        <ImageView fx:id="userIcon" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#openFileChooser" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../lib/assets/avatars/hacker.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <HBox alignment="CENTER" layoutX="1.0" prefHeight="54.0" prefWidth="280.0">
+                     <children>
+                        <Label styleClass="logo1" stylesheets="@styles.css" text="Flip" />
+                        <Label styleClass="logo2" stylesheets="@styles.css" text="Card" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <VBox layoutX="30.0" layoutY="150.0" prefHeight="200.0" prefWidth="250.0" spacing="20.0">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="250.0" styleClass="home" stylesheets="@styles.css">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#goToHome" prefHeight="60.0" prefWidth="250.0" styleClass="homeButton" stylesheets="@styles.css" text="Home">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../lib/assets/icons/home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets right="100.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="250.0" styleClass="library" stylesheets="@styles.css">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#goToLibrary" prefHeight="60.0" prefWidth="250.0" styleClass="currentPage" stylesheets="@styles.css" text="Library">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../lib/assets/icons/book.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets right="90.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="250.0" styleClass="newCollection" stylesheets="@styles.css">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#goToNewList" prefHeight="60.0" prefWidth="250.0" styleClass="newCollectionButton" stylesheets="@styles.css" text="New List">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../lib/assets/icons/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets right="70.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="250.0" styleClass="liked" stylesheets="@styles.css">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#goToLiked" prefHeight="60.0" prefWidth="250.0" styleClass="likedButton" stylesheets="@styles.css" text="Liked" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../lib/assets/icons/heart64.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets right="100.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <Pane layoutX="30.0" layoutY="500.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="250.0" styleClass="logout" stylesheets="@styles.css">
+               <children>
+                  <Button graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#goToLogin" prefHeight="60.0" prefWidth="250.0" styleClass="logoutButton" stylesheets="@styles.css" text="Log Out">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../lib/assets/icons/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="70.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="280.0" prefHeight="600.0" prefWidth="920.0" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="cardViewPane" layoutY="80.0" prefHeight="520.0" prefWidth="920.0">
+               <children>
+                  <Button fx:id="nextButton" layoutX="682.0" layoutY="430.0" mnemonicParsing="false" onMouseClicked="#next" styleClass="cardButtons" stylesheets="@styles.css">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../lib/assets/icons/next.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox layoutX="410.0" layoutY="44.0" spacing="5.0" style="-fx-background-color: #cccccc; -fx-background-radius: 10;">
+                     <children>
+                        <Label fx:id="currentCard" alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="34.0" text="1">
+                           <font>
+                              <Font name="Courier New Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="31.0" prefWidth="14.0" text="/">
+                           <font>
+                              <Font name="Courier New" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="numberOfCards" prefHeight="31.0" prefWidth="34.0" text="20">
+                           <font>
+                              <Font name="Courier New Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </HBox>
+                  <Button fx:id="flipButton" layoutX="403.0" layoutY="430.0" mnemonicParsing="false" onMouseClicked="#flip" styleClass="cardButtons" stylesheets="@styles.css" text="FLIP CARD">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="previousButton" layoutX="185.0" layoutY="430.0" mnemonicParsing="false" onMouseClicked="#previous" styleClass="cardButtons" stylesheets="@styles.css">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../lib/assets/icons/previous.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane fx:id="card" layoutX="185.0" layoutY="95.0" prefHeight="300.0" prefWidth="550.0" styleClass="card" stylesheets="@styles.css">
+                     <children>
+                        <Label fx:id="cardText" alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="240.0" prefWidth="490.0" text="Label">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Label layoutX="100.0" layoutY="20.0" text="My Library">
+               <font>
+                  <Font name="Calibri Bold" size="48.0" />
+               </font>
+            </Label>
+            <Line endX="120.0" layoutX="200.0" layoutY="75.0" startX="-100.0" />
+            <Label fx:id="titleLabel" layoutX="384.0" layoutY="33.0" maxWidth="200.0" prefHeight="40.0" prefWidth="200.0" text="Title">
+               <font>
+                  <Font name="Calibri" size="30.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="584.0" layoutY="33.0" prefHeight="40.0" prefWidth="300.0" spacing="30.0">
+               <children>
+                  <Button fx:id="play" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#play" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #40C663; -fx-border-width: 3; -fx-border-color: #000000; -fx-border-insets: -1; -fx-border-radius: 7; -fx-background-radius: 7;">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../lib/assets/icons/299063_heart_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="edit" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#edit" prefHeight="36.0" prefWidth="36.0" style="-fx-background-insets: 0; -fx-background-color: #E6D93E;">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../lib/assets/icons/edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="share" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#share" prefHeight="36.0" prefWidth="36.0" style="-fx-background-radius: 7; -fx-border-insets: -1; -fx-border-color: #000000; -fx-border-width: 3; -fx-border-radius: 7; -fx-background-color: #9CCAF7;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../lib/assets/icons/share.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="delete" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#delete" prefHeight="36.0" prefWidth="36.0" style="-fx-border-insets: -1; -fx-border-color: #000000; -fx-border-radius: 7; -fx-background-radius: 7; -fx-border-width: 3; -fx-background-color: #CA1D56;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../lib/assets/icons/bin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Line endX="-80.0" layoutX="442.0" layoutY="54.0" startX="-100.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" stylesheets="@../../../../hw/java/myproject/src/styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LibraryController">
+   <children>
+      <Pane layoutY="4.0" prefHeight="600.0" prefWidth="280.0" styleClass="menuBar" stylesheets="@styles.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="280.0" styleClass="userInfo" stylesheets="@styles.css">
+               <children>
+                  <Pane layoutX="95.0" layoutY="60.0" prefHeight="30.0" prefWidth="150.0">
+                     <children>
+                        <Label fx:id="usernameMenuBar" alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="150.0" styleClass="usernameMenuBar" stylesheets="@styles.css" text="Username" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="45.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="32.0">
+                     <children>
+                        <ImageView fx:id="userIcon" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#openFileChooser" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../lib/assets/avatars/hacker.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <HBox alignment="CENTER" layoutX="1.0" prefHeight="54.0" prefWidth="280.0">
+                     <children>
+                        <Label styleClass="logo1" stylesheets="@styles.css" text="Flip" />
+                        <Label styleClass="logo2" stylesheets="@styles.css" text="Card" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <VBox layoutX="30.0" layoutY="150.0" prefHeight="200.0" prefWidth="250.0" spacing="20.0">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="250.0" styleClass="home" stylesheets="@styles.css">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#goToHome" prefHeight="60.0" prefWidth="250.0" styleClass="homeButton" stylesheets="@styles.css" text="Home">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../lib/assets/icons/home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets right="100.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="250.0" styleClass="library" stylesheets="@styles.css">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#goToLibrary" prefHeight="60.0" prefWidth="250.0" styleClass="currentPage" stylesheets="@styles.css" text="Library">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../lib/assets/icons/book.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets right="90.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="250.0" styleClass="newCollection" stylesheets="@styles.css">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#goToNewList" prefHeight="60.0" prefWidth="250.0" styleClass="newCollectionButton" stylesheets="@styles.css" text="New List">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../lib/assets/icons/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets right="70.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="250.0" styleClass="liked" stylesheets="@styles.css">
+                     <children>
+                        <Button graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#goToLiked" prefHeight="60.0" prefWidth="250.0" styleClass="likedButton" stylesheets="@styles.css" text="Liked" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../lib/assets/icons/heart64.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets right="100.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <Pane layoutX="30.0" layoutY="500.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="250.0" styleClass="logout" stylesheets="@styles.css">
+               <children>
+                  <Button graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#goToLogin" prefHeight="60.0" prefWidth="250.0" styleClass="logoutButton" stylesheets="@styles.css" text="Log Out">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../lib/assets/icons/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="70.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="280.0" prefHeight="600.0" prefWidth="920.0" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="100.0" layoutY="20.0" text="My Library">
+               <font>
+                  <Font name="Calibri Bold" size="48.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutY="100.0" prefWidth="920.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" stylesheets="@styles.css">
+               <content>
+                  <FlowPane fx:id="flowPaneLibrary" hgap="50.0" prefHeight="497.0" prefWidth="900.0" vgap="50.0">
+                     <padding>
+                        <Insets bottom="30.0" left="100.0" right="50.0" top="30.0" />
+                     </padding>
+                  </FlowPane>
+               </content>
+            </ScrollPane>
+            <Line endX="120.0" layoutX="200.0" layoutY="75.0" startX="-100.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

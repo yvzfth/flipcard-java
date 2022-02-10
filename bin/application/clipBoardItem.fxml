@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="clipBoardItem" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="480.0" spacing="10.0" style="-fx-background-radius: 8; -fx-background-color: #cccccc; -fx-border-radius: 8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="clipBoardFrontField" prefHeight="30.0" prefWidth="225.0" promptText="Front">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </TextField>
+      <TextField fx:id="clipBoardBackField" prefHeight="30.0" prefWidth="225.0" promptText="Back">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </TextField>
+   </children>
+</HBox>

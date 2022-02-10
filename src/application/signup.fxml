@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignupController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #C79711;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../lib/assets/photos/welcome.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="600.0" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" layoutY="100.0" prefHeight="50.0" prefWidth="600.0" spacing="100.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#goToSignup" prefHeight="50.0" prefWidth="120.0" styleClass="signupButton" stylesheets="@styles.css" text="Sign Up" />
+                  <Button mnemonicParsing="false" onMouseClicked="#goToLogin" prefHeight="50.0" prefWidth="120.0" styleClass="loginButton" stylesheets="@styles.css" text="Login">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox layoutX="130.0" layoutY="220.0" prefWidth="250.0" spacing="30.0">
+               <children>
+                  <VBox prefHeight="0.0" prefWidth="250.0">
+                     <children>
+                        <Label text="Email">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="emailSignupPage" onKeyPressed="#submitKeyPressed" promptText="example@mail.com" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="0.0" prefWidth="250.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="Username">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" text="(3-10 characters)*">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="usernameSignupPage" onKeyPressed="#submitKeyPressed" promptText="name123" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="0.0" prefWidth="250.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="Password">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" text="(6-12 characters)*">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <PasswordField fx:id="passwordSignupPage" onKeyPressed="#submitKeyPressed" promptText="••••••••••••" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="submitButton" mnemonicParsing="false" onKeyPressed="#submitKeyPressed" onMouseClicked="#signupSubmit" prefHeight="30.0" prefWidth="100.0" styleClass="submitButton" stylesheets="@styles.css" text="Submit">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
